@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="movieDB.RootLayoutController">
+  
+  <top>
+    <MenuBar>
+      <menus>
+        <Menu mnemonicParsing="false" text="Ovládání">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleConfig" text="Změna vzhledu">
+              <accelerator>
+                <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+              </accelerator>
+            </MenuItem>
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Exit" >
+            <accelerator>
+                <KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+              </accelerator>
+            </MenuItem>
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Statistiky">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleShowCountStatistics" text="Počet filmů dle žánrů" />
+            <MenuItem mnemonicParsing="false" onAction="#handleShowRatingStatistics" text="Průměrné hodnocení filmů dle žánrů" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Nápověda">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="O programu">
+            <accelerator>
+                <KeyCodeCombination alt="UP" code="A" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+            </accelerator>
+            </MenuItem>
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+  </top>
+</BorderPane>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="750.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="movieDB.MovieEditDialogController">
+  <children>
+      <BorderPane layoutY="4.0" prefHeight="385.0" prefWidth="657.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="4.0">
+         <bottom>
+          <HBox id="HBox" alignment="CENTER" minWidth="-1.0" prefHeight="0.0" prefWidth="657.0" spacing="5.0" BorderPane.alignment="CENTER">
+            <children>
+              <Button defaultButton="true" mnemonicParsing="false" onAction="#handleOk" prefWidth="90.0" text="OK" />
+              <Button cancelButton="true" mnemonicParsing="false" onAction="#handleCancel" prefHeight="33.0" prefWidth="93.0" text="Cancel" />
+            </children>
+          </HBox>
+         </bottom>
+         <top>
+          <GridPane>
+            <children>
+              <Label text="Název" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+              <Label text=" Originální název" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+              <Label text="Hodnocení" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+              <Label text="Režie" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+              <Label text="Žánr" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+              <Label text="Země původu" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+              <Label text="Rok" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+              <TextField fx:id="originalNameField" prefHeight="25.0" prefWidth="159.0" GridPane.columnIndex="3" />
+                  <TextField id="nameField" fx:id="nameField" prefHeight="25.0" prefWidth="159.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="ratingField" prefHeight="25.0" prefWidth="159.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="genreField" prefHeight="25.0" prefWidth="159.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="countryField" prefHeight="25.0" prefWidth="159.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="directorField" prefHeight="25.0" prefWidth="159.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <TextField fx:id="yearField" prefHeight="25.0" prefWidth="159.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            </children>
+            <columnConstraints>
+              <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="80.0" prefWidth="128.0" />
+              <ColumnConstraints hgrow="SOMETIMES" maxWidth="243.0" minWidth="10.0" prefWidth="243.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="243.0" minWidth="10.0" prefWidth="243.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="243.0" minWidth="10.0" prefWidth="243.0" />
+            </columnConstraints>
+            <rowConstraints>
+              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+          </GridPane>
+         </top>
+         <center>
+            <VBox prefHeight="212.0" prefWidth="658.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="  Herci  ">
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </Label>
+                        <TextArea fx:id="actorsField" wrapText="true" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets bottom="10.0" />
+                           </HBox.margin>
+                        </TextArea>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="O filmu">
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </Label>
+                        <TextArea fx:id="aboutField" wrapText="true" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </center>
+      </BorderPane>
+  </children>
+</AnchorPane>
